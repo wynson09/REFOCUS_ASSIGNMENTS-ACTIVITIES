@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+body{
+    background-color: grey;
+}
+.CV-size {
+    width: 768px;
+    height: 1105px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.sidebar{
+    background-color: #2b3a50;
+    color: white;
+    width: 270px;
+    height: 1105px;
+}
+.CV-pic {
+    margin-top: 70px;
+    width: 250px;
+    clip-path: polygon(50% 0%, 95% 30%, 95% 70%, 50% 100%, 5% 70%, 5% 30%);
+}
+.sidebar-section1 {
+    display: flex;
+    justify-content: center;
+}
+/* about me */
+.sidebar-section2, .sidebar-section3, .sidebar-section4, .sidebar-section5 {
+    margin: 60px 40px;
+}
+
+.sidebar-section2 h4, .sidebar-section3 h4, .sidebar-section4 h4, .sidebar-section5 h4 {
+    display: inline;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+}
+
+.sidebar-section2 p, .sidebar-section3 p, .sidebar-section4 p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+/* CONTACT */
+.img-size {
+    width: 22px;
+    height: 22px;
+}
+.img-size-loc {
+    margin-top: -2px;
+    width: 27px;
+    height: 27px;
+}
+.location-box p {
+    margin-top: -1px;
+}
+.location-box {
+    margin-left: -3px;
+}
+.location-box, .contactNumber-box, .email-box, .fb-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+.sidebar-section3-container p {
+    margin-left: 13px;
+}
+.sidebar-section3 a {
+    margin-left: 13px;
+    font-size: 10px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+}
+/* INTEREST */
+.sidebar-section4 p {
+    margin-top: 10px;
+}
+.arrange-interest {
+    display: flex;
+    flex-direction: row;
+}
+.second-column {
+    margin-left: 50px;
+}
+/* LANGUAGE */
+.sidebar-section5 p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.main {
+    color: #2b3a50;
+}
+/* HEADER */
+.name, .lastname {
+    font-size: 55px;
+    font-weight: 400;
+    margin-left: 25px;
+}
+.lastname {
+    display: inline;
+    border-bottom: 8px solid #2b3a50;
+}
+.CV-header {
+    margin-top: 30px;
+    color: #2b3a50;
+}
+.web-dev-text {
+    background-color: white;
+    margin-top: -5px;
+    position: absolute;
+    margin-left: 25px;
+    padding-right: 7px;
+    font-weight: 800;
+}
+/* CAREER OBJECTIVE */
+.header-section1 {
+    margin: 40px 20px;
+}
+.header-section2 {
+    margin: -20px 20px;
+}
+.header-section1 h4, .header-section2-container h4 {
+    display: inline;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #2b3a50;
+}
+.header-section1 p, .header-section2-container p {
+    font-size: 10px;
+    margin-top: -5px;
+}
+.context-educational-background {
+    margin-top: 7px;
+}
+.context-educational-background h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.context-educational-background p {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+.header-section2 {
+    display: flex;
+    flex-direction: row;
+}
+/* Technical Proficiencies */
+.bottomBorder {
+    display: inline;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #2b3a50;
+}
+.technical-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.header-section2-rightSide {
+    margin-left: 30px;
+}
+.technical-skills p{
+    font-size: 10px;
+}
+.skills-context {
+    margin-top: 7px;
+}
+/* CETIFICATES*/
+.certificate-container {
+    margin-top: 10px;
+    width: 190px;
+}
+
+.certificate-container h4{
+    display: inline;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #2b3a50;
+}
+.certificate-container p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+

@@ -1,0 +1,22 @@
+.container {
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    height: 400px;
+    width: 400px;
+    font-family: Arial;
+}
+.title {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    margin-right: 14px;
+}
+.text-info {
+    color: red;
+    padding-right: 38px;
+}

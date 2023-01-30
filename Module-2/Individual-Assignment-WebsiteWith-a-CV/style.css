@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: rgb(187, 187, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    min-height: 1400px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0,0.1);
+}
+.container .left_side {
+    position: relative;
+    background: #2b3a50;
+    padding: 5px;
+}
+.container .right_side {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+}
+/* Profile */
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile_img img {
+    margin-top: 55px;
+    width: 280px;
+    clip-path: polygon(50% 0%, 95% 30%, 95% 70%, 50% 100%, 5% 70%, 5% 30%);
+}
+.profile_text {
+    display: none;
+    margin-top: 10px;
+    color: #fff;
+    position: relative;
+}
+.profile_text h1 {
+    font-weight: 500;
+}
+.profile_text_border {
+    border-bottom: 8px solid #fff;
+    padding-bottom: 7px;
+}
+.profile_text h5 {
+    position: absolute;
+    text-align: left;
+    background: #2b3a50;
+    margin-top: 83px;
+    padding-right: 5px;
+}
+.profile_text .span {
+    cursor: pointer;
+    position: relative;
+}
+.profile_text .middle_name {
+   background: #fff;
+   color: #2b3a50;
+   padding: 10px 12px 10px 12px;
+   border-radius: 4px;
+   position: absolute;
+   font-size: 15px;
+   left: 0;
+   margin-top: 23px;
+   margin-left: -25px;
+   opacity: 0;
+   transition: opacity 0.15s;
+   pointer-events: none;
+}
+.profile_text .span:hover .middle_name {
+    opacity: 1;
+}
+/* ABOUT ME */
+.about_me,.contact, .interest, .language {
+    color: #fff;
+    margin: 50px 25px;
+}
+.about_me_text h3, .contact_text h3, .interest_text h3, .language_text h3{
+    position: relative;
+    display: inline;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+}
+.about_me_p {
+    margin-top: 20px;
+}
+.about_me_text p {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+/* CONTACT */
+.contact_text ul {
+    position: relative;
+    margin-top: 20px;
+}
+.contact_text ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+}
+.icon {
+    display: inline-block;
+    font-size: 25px;
+}
+.text {
+    font-size: 12px;
+    margin-left: 18px;
+    margin-top: 5px;
+}
+.contact_text .location_icon {
+    margin-left: 9px;
+}
+.contact_text .contact_icon {
+    margin-left: 4px;
+}
+.location_icon span {
+    font-size: 28px;
+    margin-left: -2px;
+}
+.facebook_icon p {
+    margin-left: 20px;
+    padding-top: 2px;
+}
+.facebook_icon a {
+    text-decoration: none;
+    color: #fff;
+}
+/* INTEREST */
+.interest_grid ul {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.interest_grid ul li {
+    list-style: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.interest_grid ul .fa {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+/* LANGUAGE */
+.language_text ul {
+    margin-top: 20px;
+}
+.language_text li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.language_text .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.language_text .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.language_list {
+    font-size: 13px;
+}
+/* HEADER NAME */
+.right_side {
+    color: #2b3a50;
+}
+.name, .lastname {
+    font-size: 70px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.lastname {
+    display: inline;
+    border-bottom: 8px solid #2b3a50;
+}
+.CV_header {
+    position: relative;
+    margin-top: 30px;
+    color: #2b3a50;
+}
+.web-dev-text {
+    background-color: white;
+    margin-top: -5px;
+    position: absolute;
+    margin-left: 10px;
+    padding-right: 7px;
+    font-weight: 800;
+}
+.CV_header span {
+    cursor: pointer;
+    position: relative;
+}
+.CV_header .middle_name {
+   background: #2b3a50;
+   color: #fff;
+   padding: 10px 12px 10px 12px;
+   border-radius: 4px;
+   position: absolute;
+   font-size: 15px;
+   left: 0;
+   margin: 12px 1px;
+   opacity: 0;
+   transition: opacity 0.15s;
+   pointer-events: none;
+}
+.CV_header span:hover .middle_name {
+    opacity: 1;
+}
+/* OBJECTIVE */
+.objective {
+    margin: 60px 10px 0px 10px;
+}
+.objective h3, .education h3{
+    position: relative;
+    display: inline;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #2b3a50;
+}
+.objective p {
+    font-size: 13px;
+}
+.objective_text {
+    margin-top: 20px;
+}
+/* EDUCATION */
+.educ_cert_grid {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.educational_background {
+    margin-top: 20px;
+}
+.context_educational_background h4, .year_company h4, .skills_container h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.context_educational_background p {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+/* CERTIFICATE */
+.certificate_text{
+    margin-top: 20px;
+}
+.certificate_container h3, .experience h3, .skills h3{
+    display: inline;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #2b3a50;
+}
+.certificate_container p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* EXPERIENCE */
+.experience, .skills {
+    margin: 30px 10px 0 10px;
+}
+.experience .box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.year_company {
+    min-width: 150px;
+}
+.experience_descript span, .experience_text p {
+    font-size: 13px;
+}
+.experience_descript li {
+    position: relative;
+    list-style: none;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+}
+.experience_descript a {
+    margin-right: 10px;
+}
+
+/* PROF SKILLS */
+
+.skills_box {
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+.skills .skills_container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+}
+.skills .skills_container .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .skills_container .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+
+
+/* media query */
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .profile_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .about_me_text p {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .interest_grid ul {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .interest_grid ul li {
+        font-size: 16px;
+    }
+    .interest_grid ul .fa {
+        font-size: 25px;
+        margin-right: 16px;
+    }
+    .language_list {
+        font-size: 16px;
+    }
+
+    /* right */
+
+    .header {
+        display: none;
+    }
+    .profile_text_name {
+        display: none;
+    }
+    .profile_text h5 {
+        margin-top: 44px;
+        padding-left: 2px;
+    }
+    .objective p {
+        font-size: 16px;
+    }
+    .context_educational_background p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .certificate_container p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .educ_cert_grid {
+        margin-top: 60px;
+        grid-template-columns: repeat(2,1fr);
+    }.context_educational_background h4, .experience h4, .skills_box h4 {
+        font-size: 18px;
+    }
+    .experience_descript span, .experience_text p {
+        font-size: 16px;
+    }
+    .experience, .skills {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width:1000px) {
+    .about_me {
+        margin-top: 80px;
+    }
+}
+@media (max-width:600px){
+    .profile_text_name {
+        display: block;
+    }
+    .profile_text_span {
+        display: none;
+    }
+    .profile_text h5 {
+        margin-top: 82px;
+        padding: 5px;
+    }
+    .interest_grid ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .educ_cert_grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .certificate_container {
+        margin-top: 40px;
+    }
+    .context_educational_background h4 {
+        font-size: 18px;
+    }
+}
+@media (max-width:400px){
+    .interest_grid ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <form name="signup" id="signup-form">
+    <div class="align-center">
+      <div class="header">
+        <h1>Sign up</h1>
+      </div>
+      <div class="container">
+        <div class="section">
+          <div>
+            <div class="arrange-style">
+                <label for="fname">First Name</label>
+                <div class="error-box">
+                    <label id="errorfirstnameField" class="error"></label>
+                </div>
+            </div>
+            <input type="text" id="fname" name="firstnameField" placeholder="Your name..">
+          </div>
+          <div>
+            <div class="arrange-style">
+                <label for="mname">Middle Name</label>
+                <div class="error-box">
+                    <label id="errormiddlenameField" class="error"></label>
+                </div>
+            </div>
+            <input type="text" id="mname" name="middlenameField" placeholder="Your middle name..">
+          </div>
+          <div>
+            <div class="arrange-style">
+              <label for="lname">Last Name</label>
+              <div class="error-box">
+                <label id="errorlastnameField" class="error"></label>
+              </div>
+              <input type="text" id="lname" name="lastnameField" placeholder="Your last name..">
+            </div>
+        </div>
+        <div>
+          <div class="arrange-style">
+            <label for="birthday">Birthday</label>
+            <div class="error-box">
+              <label id="errorbirthdayField" class="error"></label>
+            </div>
+            <input type="date" id="birthday" name="birthdayField">
+          </div>
+        </div>
+        <div>
+          <div id="error-email" class="arrange-style">
+            <label for="email">Email</label>
+            <div class="error-box">
+              <label id="erroremailField" class="error"></label>
+            </div>
+            <input type="email" id="email" name="emailField" placeholder="Your email address..">
+          </div>
+        </div>
+          <div class="arrange-style">
+            <label for="country">Region</label>
+            <div class="error-box">
+              <label id="errorregionField" class="error"></label>
+            </div>
+            <select id="regionID" name="regionField">
+              <option value="" disabled="disabled" selected="selected">Choose option</option>
+              <option value="Region I Ilocos Region">Region I Ilocos Region</option>
+              <option value="Region II Cagayan Valley">Region II Cagayan Valley</option>
+              <option value="Region III Central Luzon">Region III Central Luzon</option>
+              <option value="Region IV-A CALABARZON">Region IV-A CALABARZON</option>
+              <option value="MIMAROPA Region">MIMAROPA Region</option>
+              <option value="Region V Bicol Region">Region V Bicol Region</option>
+              <option value="Region VI Western Visayas">Region VI Western Visayas</option>
+              <option value="Region VII Central Visayas">Region VII Central Visayas</option>
+              <option value="Region VIII Eastern Visayas">Region VIII Eastern Visayas</option>
+              <option value="Region IX Zamboanga Peninsula">Region IX Zamboanga Peninsula</option>
+              <option value="Region X Northern Mindanao">Region X Northern Mindanao</option>
+              <option value="Region XI Davao Region">Region XI Davao Region</option>
+              <option value="Region XII SOCCSKSARGEN">Region XII SOCCSKSARGEN</option>
+              <option value="Region XIII Caraga">Region XIII Caraga</option>
+              <option value="NCR National Capital Region">NCR National Capital Region</option>
+              <option value="CAR Cordillera Administrative Region">CAR Cordillera Administrative Region</option>
+              <option value="BARMM Bangsamoro Autonomous Region in Muslim Mindanao">BARMM Bangsamoro Autonomous Region
+                in Muslim Mindanao</option>
+            </select>
+          </div>
+          <div class="arrange-style">
+            <label for="province">Province</label>
+            <div class="error-box">
+              <label id="errorprovinceField" class="error"></label>
+            </div>
+            <input type="text" id="province" name="provinceField" placeholder="Your province..">
+          </div>
+          <div class="arrange-style">
+            <label for="barangay">Barangay</label>
+            <div class="error-box">
+              <label id="errorbarangayField" class="error"></label>
+            </div>
+            <input type="text" id="barangay" name="barangayField" placeholder="Your barangay..">
+          </div>
+          <div class="arrange-style">
+            <label for="street">Street</label>
+            <div class="error-box">
+              <label id="errorstreetField" class="error"></label>
+            </div>
+            <input type="text" id="street" name="streetField" placeholder="Your street">
+          </div>
+          <div>
+            <div class="gender">
+              <label class="gender-label">Gender</label>
+              <div class="gender-radio">
+                <label>
+                  <input type="radio" checked="checked" name="genderField" value="Male">
+                  <span class="checkmark"></span>
+                  <label class="male">Male</label>
+                </label>
+                <label>
+                  <input type="radio" name="genderField" value="Female">
+                  <span class="checkmark"></span>
+                  <label class="female">Female</label>
+                </label>
+                <label>
+                  <span class="checkmark"></span>
+                  <input type="radio" name="genderField" value="Others">
+                  <label class="others">Others</label>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div id="error-vaccine1" class="arrange-style">
+            <label for="vaccine1">Vaccination Brand (Dose 1)</label>
+            <div class="error-box">
+              <label id="errorvaccine1Field" class="error"></label>
+            </div>
+            <select id="vaccine1ID" name="vaccine1Field">
+              <option value="" disabled="disabled" selected="selected">Choose option</option>
+              <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+              <option value="AstraZeneca">AstraZeneca</option>
+              <option value="Coronavac">Coronavac</option>
+              <option value="Sputnik V">Sputnik V</option>
+              <option value="Janssen">Janssen</option>
+              <option value="Covaxin">Covaxin</option>
+              <option value="Moderna">Moderna</option>
+              <option value="Sinopharm">Sinopharm</option>
+              <option value="Covovax">Covovax</option>
+            </select>
+          </div>
+          <div class="arrange-style">
+            <label for="vaccine-date1">Date of Vaccination (Dose 1)</label>
+            <div class="error-box">
+              <label id="errorvaccine_date1Field" class="error"></label>
+            </div>
+            <input type="date" id="vaccine-date1" name="vaccine_date1Field">
+          </div>
+          <div class="arrange-style">
+            <label for="vaccine-site1">Vaccination (Dose 1) Site</label>
+            <div class="error-box">
+              <label id="errorvaccine_site1Field" class="error"></label>
+            </div>
+            <input type="text" id="vaccine-site1" name="vaccine_site1Field" placeholder="Vaccination site..">
+          </div>
+          <div>
+            <div class="Second-dose">
+              <label class="Second-dose-label">Did you already get your second vaccination? </label>
+              <div class="Second-dose-radio">
+                <label>
+                  <input type="radio" name="second-dose" value="show" onclick="hideShowDiv(1)">
+                  <span class="checkmark"></span>
+                  <label class="second-dose-yes">Yes</label>
+                </label>
+                <label>
+                  <input type="radio" name="second-dose" value="hide" onclick="hideShowDiv(2)">
+                  <span class="checkmark"></span>
+                  <label class="second-dose-no">No</label>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div id="Div">
+            <div class="arrange-style">
+              <label for="vaccine2">Vaccination Brand (Dose 2)</label>
+              <div class="error-box">
+                <label id="errorvaccine2Field" class="error"></label>
+              </div>
+              <select id="vaccine2ID" name="vaccine2Field">
+                <option value="" disabled="disabled" selected="selected">Choose option</option>
+                <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+                <option value="Coronavac">Coronavac</option>
+                <option value="Sputnik V">Sputnik V</option>
+                <option value="Janssen">Janssen</option>
+                <option value="Covaxin">Covaxin</option>
+                <option value="Moderna">Moderna</option>
+                <option value="Sinopharm">Sinopharm</option>
+                <option value="Covovax">Covovax</option>
+              </select>
+            </div>
+            <div class="arrange-style">
+              <label for="vaccine-date2">Date of Vaccination (Dose 2)</label>
+              <div class="error-box">
+                <label id="errorvaccine_date2Field" class="error"></label>
+              </div>
+              <input type="date" id="vaccine-date2" name="vaccine_date2Field">
+            </div>
+            <div class="arrange-style">
+              <label for="vaccine-site2">Vaccination (Dose 2) Site</label>
+              <div class="error-box">
+                <label id="errorvaccine_site2Field" class="error"></label>
+              </div>
+              <input type="text" id="vaccine-site2" name="vaccine_site2Field" placeholder="Vaccination site..">
+            </div>
+          </div>
+          <div class="button-box">
+            <div type="submit" class="button">
+              <button><a type="submit" href="#" style="--clr:#1e9bff"><span>submit</span><i></i></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+<script>
+  const form = document.forms.signup;
+  const firstname = form.firstnameField;
+  const middlename = form.middlenameField;
+  const lastname = form.lastnameField;
+  const birthday = form.birthdayField;
+  const email = form.emailField;
+  const region = document.getElementById('regionID');
+  const province = form.provinceField;
+  const barangay = form.barangayField;
+  const street = form.streetField;
+  const gender = form.genderField;
+  const vaccine1 = document.getElementById('vaccine1ID');
+  const vaccine2 = document.getElementById('vaccine2ID');
+  const vaccinedate1 = form.vaccine_date1Field;
+  const vaccinedate2 = form.vaccine_date2Field;
+  const vaccineSite1 = form.vaccine_site1Field;
+  const vaccineSite2 = form.vaccine_site2Field;
+  let secondDOse = 0;
+  let Check = 0;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (!firstname.value) {
+      setError(firstname, 'What is your name?');
+    }
+    else {
+      backToDefault(firstname)
+      Check += 1;
+    }
+
+    if (!middlename.value) {
+      setError(middlename, 'What is your middle name?');
+    }
+    else {
+      backToDefault(middlename)
+      Check += 1;
+    }
+
+    if (!lastname.value) {
+      setError(lastname, 'What is your last name?');
+    }
+    else {
+      backToDefault(lastname)
+      Check += 1;
+    }
+
+    if (!birthday.value) {
+      setError(birthday, 'When is your birthday?');
+    }
+    else {
+      backToDefault(birthday)
+      Check += 1;
+    }
+
+    if (!email.value) {
+      setError(email, 'What is your email?');
+    }
+    else {
+      backToDefault(email)
+      Check += 1;
+    }
+
+    if (!region.value) {
+      setError(region, 'You need to select a region');
+    }
+    else {
+      backToDefault(region)
+      Check += 1;
+    }
+
+    if (!province.value) {
+      setError(province, 'What province do you live?');
+    }
+    else {
+      backToDefault(province)
+      Check += 1;
+    }
+
+    if (!barangay.value) {
+      setError(barangay, 'What barangay do you live?');
+    }
+    else {
+      backToDefault(barangay)
+      Check += 1;
+    }
+
+    if (!street.value) {
+      setError(street, 'What street do you live?');
+    }
+    else {
+      backToDefault(street)
+      Check += 1;
+    }
+
+    if (!vaccine1.value) {
+      setError(vaccine1, 'What is your first dose vaccine?');
+    }
+    else {
+      backToDefault(vaccine1)
+      Check += 1;
+    }
+
+    if ((!vaccine2.value) && (secondDOse == 1)) {
+      setError(vaccine2, 'What is your second dose vaccine?');
+    }
+    else if(secondDOse == 2){
+      backToDefault(vaccine2)
+    }
+    else if((vaccine2.value != "") && (secondDOse == 1)){
+      backToDefault(vaccine2)
+      Check += 1;
+    }
+
+    if (!vaccinedate1.value) {
+      setError(vaccinedate1, 'When is your first dose?');
+    }
+    else {
+      backToDefault(vaccinedate1)
+      Check += 1;
+    }
+
+    if ((!vaccinedate2.value) && (secondDOse == 1)) {
+      setError(vaccinedate2, 'When is your second dose?');
+    }
+    else if(secondDOse == 2){
+      backToDefault(vaccinedate2)
+    }
+    else if((vaccinedate2.value != "") && (secondDOse == 1)){
+      backToDefault(vaccinedate2)
+      Check += 1;
+    }
+
+    if (!vaccineSite1.value) {
+      setError(vaccineSite1, 'Your first dose city location?');
+    }
+    else {
+      backToDefault(vaccineSite1)
+      Check += 1;
+    }
+
+    if ((!vaccineSite2.value) && (secondDOse == 1)) {
+      setError(vaccineSite2, 'Your second dose city location');
+    }
+    else if(secondDOse == 2){
+      backToDefault(vaccineSite2)
+    }
+    else if((vaccineSite2.value != "") && (secondDOse == 1)){
+      backToDefault(vaccineSite2)
+      Check += 1;
+    }
+
+  /* Consoling the input value */
+    if((Check == 15) || ((Check == 12) &&(secondDOse == 2)))
+    {
+      console.log('First name: ', firstname.value);
+      console.log('Middle name: ', middlename.value);
+      console.log('Last name: ', lastname.value);
+      console.log('Birthday: ', birthday.value);
+      console.log('Email: ', email.value);
+      console.log('Region: ', region.value);
+      console.log('Province ', province.value);
+      console.log('Barangay: ', barangay.value);
+      console.log('Street: ', street.value);
+      console.log('Gender: ', gender.value);
+      console.log('Vaccination Brand (Dose 1): ', vaccine1.value);
+      console.log('Date of vaccination (Dose 1): ', vaccinedate1.value);
+      console.log('Vaccination (Dose 1) Site: ', vaccineSite1.value);
+
+      if(secondDOse == 1)
+      {
+        console.log('Vaccination Brand (Dose 2): ', vaccine2.value);
+        console.log('Date of vaccination (Dose 2): ', vaccinedate2.value);
+        console.log('Vaccination (Dose 2) Site: ', vaccineSite2.value);
+        Check = 0;
+      }else {
+        console.log(`Don't have second dose vaccination.`)
+        Check = 0;
+      }
+      alert('You succesfully signed up!')
+
+    }else {
+      Check = 0;
+      return;
+    }
+    
+  })
+
+  function setError(field, errorMsg) {
+    document.getElementById('error' + field.name).innerText = errorMsg;
+    document.getElementById('error' + field.name).style.display = 'block';
+    field.style.borderColor = 'red';
+  }
+
+  function backToDefault(field) {
+    document.getElementById('error' + field.name).innerText = "";
+    document.getElementById('error' + field.name).style.display = 'none';
+    field.style.borderColor = '#ccc';
+  }
+
+  function hideShowDiv(value) {
+    if (value == 1) {
+      document.getElementById('Div').style.display = 'block';
+      secondDOse = 1;
+    }
+    if (value == 2) {
+      document.getElementById('Div').style.display = 'none';
+      secondDOse = 2;
+    }
+  }
+
+</script>
+
+</html>

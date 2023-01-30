@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>jQuery Checkbox Validation – Limiting Checkboxes To Be Checked</title>
+</head>
+<body>
+
+<input type="checkbox" class="answers" />
+ Cricket<br />
+<input type="checkbox" class="answers" />
+ Football<br />
+<input type="checkbox" class="answers" />
+ Tennis<br />
+<input type="checkbox" class="answers" />
+ Baseball<br />
+<input type="checkbox" class="answers" />
+ Soccer
+<br /><br />
+
+<a href="https://www.allphptricks.com/jquery-checkbox-validation-limiting-checkboxes-checked/">Tutorial Link</a> <br /><br />
+For More Web Development Tutorials Visit: <a href="https://www.allphptricks.com/">AllPHPTricks.com</a>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script>
+var max_limit = 3; // Max Limit
+$(document).ready(function (){
+    $(".answers:input:checkbox").each(function (index){
+        this.checked = (".answers:input:checkbox" < max_limit);
+    }).change(function (){
+        if ($(".answers:input:checkbox:checked").length > max_limit){
+            this.checked = false;
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Simple Quiz</title>
+</head>
+
+<body>
+
+  <form name="quiz" id="quiz-form">
+    <div class="align-center">
+      <div class="header">
+        <h1>Simple Quiz</h1>
+      </div>
+      <div class="container">
+        <div class="section">
+          <div class="form-control">
+            <div class="arrange-style">
+              <label for="fname">What is the capital of the Philippines?</label>
+            </div>
+            <input type="text" id="firstAnswer" name="firstAnswerField" placeholder="Enter your answer here." class="textInput">
+          </div>
+          <div id="wrong_firstAnswerField"></div>
+          <br><br>
+          <div class="form-control">
+            <div class="secondQuestion">
+              <label class="secondQuestionLabel">What is the value of x? x = 3 + 2*5.</label>
+              <div class="secondQuestion-radio">
+                <label>
+                  <input type="radio" id="firstOption" name="secondAnswerField" value="x = 25" class="checkRadio">
+                  <span class="checkmark"></span>
+                  <label for="firstOption">x = 25</label>
+                </label>
+                <label>
+                  <input type="radio" id="secondOption" name="secondAnswerField" value="x = 13" class="checkRadio">
+                  <span class="checkmark"></span>
+                  <label for="secondOption">x = 13</label>
+                </label>
+                <label>
+                  <span class="checkmark"></span>
+                  <input type="radio" id="thirdOption" name="secondAnswerField" value="x = 18" class="checkRadio">
+                  <label for="thirdOption">x = 18</label>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div id="wrong_secondAnswerField"></div>
+          <br><br>
+          <div class="form-control">
+            <label class="thirdQuestionLabel">Which of the following birds can fly? Choose 3 correct answers</label>
+            <div class="thirdQuestion">
+              <div class="group">
+                <input type="checkbox" id="parrotID" value="parrot" class="answers" name="thirdAnswerField">
+                <label class="Q3label" for="parrotID">Parrot</label>
+              </div>
+              <div class="group">
+                <input type="checkbox" id="eagleID" value="eagle" class="answers" name="thirdAnswerField">
+                <label class="Q3label" for="eagleID">Eagle</label>
+              </div>
+              <div class="group">
+                <input type="checkbox" id="penguinID" value="penguin" class="answers" name="thirdAnswerField">
+                <label class="Q3label" for="penguinID">Penguin</label>
+              </div>
+              <div class="group">
+                <input type="checkbox" id="crowID" value="crow" class="answers" name="thirdAnswerField">
+                <label class="Q3label" for="crowID">Crow</label>
+              </div>
+            </div>
+          </div>
+          <div id="wrong_thirdAnswerField"></div>
+          <br><br>
+          <div class="form-control">
+            <div class="button-box">
+              <div type="submit" class="button">
+                <button ><a href="#" style="--clr:#6eff3e"><span>submit</span><i></i></a></button>
+                <button type="reset"><a href="#" style="--clr:#ff1867"><span>reset</span><i></i></a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+ </body>
+ <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+ <script>
+  const form = document.forms.quiz;
+  const firstQuestionAnswer = form.firstAnswerField;
+  const secondQuestionAnswer = form.secondAnswerField;
+  const thirdQuestionAnswer = 'wrong_thirdAnswerField';
+
+  /* Answers */
+  let answer1 = 'manila';
+  let answer2 = 'x = 13';
+  let score = 0;
+  let thirdQuestionCorrectAns = 0
+
+  /* Function that check all question has been answered*/
+
+  let questionChecker = 0;
+
+  function answerChecker(){
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+
+    if(!firstQuestionAnswer.value){
+      wrongAnswer(firstQuestionAnswer, 'Please answer the first question!');
+      questionChecker = 1;
+    }
+    if(!secondQuestionAnswer.value){
+      wrongAnswer(secondQuestionAnswer, 'Please answer the second question!');   
+      questionChecker = 1;   
+    }
+    if (checkboxes.length < 3)
+    {
+      wrongAnswer(thirdQuestionAnswer, 'Please choose 3 answers in the third question!');
+      questionChecker = 1;
+    }
+  }
+
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    clearWrongMsg();
+    answerChecker();
+    if(questionChecker == 0){
+      checkQuestion1();
+      checkQuestion2();
+      checkQuestion3();
+      score += thirdQuestionCorrectAns;
+      alert('Congratulations you completed the quiz! \n Your total score is '+ score+ ' out of 5');
+    }
+    questionChecker = 0;
+    thirdQuestionCorrectAns = 0;
+    score = 0;
+  })
+
+  function clearInput(){
+  $('.textInput:input[type="text"]').each(function(){
+      $(this).val("");  
+  });
+  $('.checkRadio:input[type="radio":checked]').each(function(){
+      $(this).prop('checked', false);  
+  });
+  $('.answers:input[type="checkbox":checked]').each(function(){
+    $(this).prop('checked', false);  
+  });
+ }
+
+  form.addEventListener('reset', function(event){
+    event.preventDefault();
+    clearInput();
+    clearWrongMsg();
+  })
+
+  function clearWrongMsg(){
+      document.getElementById('wrong_firstAnswerField').innerText = "";
+      document.getElementById('wrong_secondAnswerField').innerText = "";
+      document.getElementById('wrong_thirdAnswerField').innerText = "";
+  }
+
+  function checkQuestion1(){
+    if(firstQuestionAnswer.value.toLowerCase() == answer1){
+      correctAnswer(firstQuestionAnswer, 'You got the correct answer!');
+      score += 1;
+    }else{
+      wrongAnswer(firstQuestionAnswer, 'Your answer is incorrect!');
+    }
+  }
+
+  function checkQuestion2(){
+    if (secondQuestionAnswer.value == answer2){
+      correctAnswer(secondQuestionAnswer, 'You got the correct answer!');
+      score += 1;
+    }
+    else{
+      wrongAnswer(secondQuestionAnswer, 'Your answer is incorrect!');
+    }
+  }
+  function checkQuestion3(){
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    for (var i = 0; i < checkboxes.length; i++) {
+       
+      if(checkboxes[i].value == 'parrot')
+      {
+        thirdQuestionCorrectAns += 1;
+      }
+      else if (checkboxes[i].value == 'eagle')
+      {
+        thirdQuestionCorrectAns += 1;
+      }
+      else if (checkboxes[i].value == 'crow')
+      {
+        thirdQuestionCorrectAns += 1;
+      }
+    }
+    if ((thirdQuestionCorrectAns == 3) && (checkboxes.length == 3)){
+      correctAnswer(thirdQuestionAnswer, 'You got 3 correct answers!');
+    }
+    else if ((thirdQuestionCorrectAns < 3) && (checkboxes.length == 3))
+    {
+      wrongAnswer(thirdQuestionAnswer, 'You got 2 correct answers!');
+    }
+
+  }
+
+  function wrongAnswer(field, errorMsg) {
+    if(field == secondQuestionAnswer){
+      document.getElementById('wrong_secondAnswerField').innerText = errorMsg;
+      document.getElementById('wrong_secondAnswerField').style.color = "red";
+    }else if(field == firstQuestionAnswer){
+      document.getElementById('wrong_' + field.name).innerText = errorMsg;
+      document.getElementById('wrong_' + field.name).style.color = "red";
+    }
+    else
+    {
+      document.getElementById(field).innerText = errorMsg;
+      document.getElementById(field).style.color = "red";
+    }
+  }
+  function correctAnswer(field, errorMsg) {
+    if(field == secondQuestionAnswer){
+      document.getElementById('wrong_secondAnswerField').innerText = errorMsg;
+      document.getElementById('wrong_secondAnswerField').style.color = "green";
+    }else if(field == firstQuestionAnswer){
+      document.getElementById('wrong_' + field.name).innerText= errorMsg;
+      document.getElementById('wrong_' + field.name).style.color = "green";
+    }
+    else
+    {
+      document.getElementById(field).innerText = errorMsg;
+      document.getElementById(field).style.color = "green";
+    }
+  }
+
+  /* Limit the check box by 3 using jquery*/
+  var max_limit = 3; // Max Limit
+  $(document).ready(function (){
+      $(".answers:input:checkbox").each(function (index){
+          this.checked = (".answers:input:checkbox" < max_limit);
+      }).change(function (){
+          if ($(".answers:input:checkbox:checked").length > max_limit){
+              this.checked = false;
+          }
+      });
+  });
+
+
+</script>
+
+</html>

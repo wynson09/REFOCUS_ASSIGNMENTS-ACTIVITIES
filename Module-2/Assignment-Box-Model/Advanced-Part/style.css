@@ -1,0 +1,15 @@
+.container {
+    border: 1px solid grey;
+    padding: 16px;
+    height: 400px;
+    width: 400px;
+    font-family: Arial;
+}
+.title {
+    margin: 10px 5px 10px 5px;
+    padding: 10px 12px 11px 13px;
+}
+.text-info {
+    padding: 6px 0 6px 0;
+    margin: 0 16px 0 16px;
+}

@@ -1,0 +1,61 @@
+div {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    min-width: 300px;
+    max-width: 600px;
+    height: 225px;
+    border-radius: 6px;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
+.Pic {
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 50px;
+}
+.image {
+    width: 50px;
+    border-radius: 50px;
+}
+.Info {
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+.Name {
+    font-weight: bold;
+}
+.personal-info {
+    color: grey;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.Follow-buttons {
+    width: 80px;
+}
+button {
+    margin-top: 19px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgb(72, 131, 240);
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-style: none;
+    border-radius: 5px;
+    align-items: center;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+

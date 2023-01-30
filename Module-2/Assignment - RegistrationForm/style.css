@@ -1,0 +1,165 @@
+* {
+    font-family: 'Roboto', Arial;
+}
+body {
+    height: 2200px;
+    background-color: black;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+input[type=text], [type=email], [type=date], select, textarea {
+    width: 360px; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  select, input[type=radio] {
+    cursor: pointer;
+  }
+ 
+  .container {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 400px;
+    z-index: 100;
+  }
+  .align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .section {
+    margin-left: 20px;
+  }
+  h1{
+    margin: 0;
+    padding: 0;
+  }
+  .header h1 {
+    background-color: rgb(73, 73, 73);
+    color: white;
+    text-align: center;
+    width: 440px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 100px;
+  }
+  .gender-radio {
+    display: flex;
+    margin: 10px 20px 10px 20px;
+    justify-content: space-between;
+  }
+  .Second-dose-radio {
+    margin: 10px 20px 10px 20px;
+  }
+  .error {
+    font-size: 15px;
+    background-color: rgb(255, 50, 50);
+    color: white;
+    padding: 5px 20px 5px 20px;
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    clip-path: polygon(100% 0%, 95% 49%, 100% 100%, 7% 100%, 0% 50%, 6% 1%);
+    z-index: 100;
+  }
+  .error-box {
+    display: flex;
+    margin-left: 370px;
+  }
+
+  /* design button */
+  .button-box{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    margin: 20px 0px 20px;
+  }
+
+  .button a {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+  }
+  .button a:hover {
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+  }
+  .button a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+  }
+  .button a span {
+    position: relative;
+    z-index: 1;
+  }
+  .button a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  .button a i::before {
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  .button a:hover i::before {
+    width: 20px;
+    left: 20%;
+  }
+  .button a i::after {
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  .button a:hover i::after {
+    width: 20px;
+    left: 80%;
+  }
+  button {
+    border: none;
+  }

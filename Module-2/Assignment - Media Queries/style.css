@@ -1,0 +1,21 @@
+.container {
+    font-family: Arial;
+}
+@media (min-width: 0px) and (max-width: 688px){
+    .PC,
+    .tablet {
+        display: none;
+    }
+}
+@media (min-width: 689px) and (max-width: 992px){
+    .mobile,
+    .PC {
+        display: none;
+    }
+}
+@media (min-width: 993px) {
+    .mobile,
+    .tablet {
+        display: none;
+    }
+}

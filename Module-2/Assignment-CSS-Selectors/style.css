@@ -1,0 +1,15 @@
+* {
+    color: gray;
+}
+
+.Header-red {
+    color: red;
+}
+
+#Header-blue {
+    color: blue;
+}
+
+p {
+    color: purple;
+}

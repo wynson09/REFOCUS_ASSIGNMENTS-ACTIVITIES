@@ -1,0 +1,46 @@
+div {
+    font-family: Arial;
+}
+body {
+    height: 3000px;
+}
+.Closed-button {
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+    padding-right: 10px;
+    border-style: none;
+    border-radius: 60px;
+    position: absolute;
+    top: -13px;
+    left: -13px;
+}
+.absolute-box {
+    background-color: grey;
+    width: 320px;
+    height: 180px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.video-time {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 2px;
+}

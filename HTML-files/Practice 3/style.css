@@ -1,0 +1,40 @@
+.First-div {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    width: 300px;
+    height: 90px;
+    border-color: rgb(134, 134, 134);
+}
+.Text {
+    margin-left: 20px;
+    font-family: arial;
+}
+.Yes-button {
+    margin-left: 20px;
+}
+.No-button {
+    margin-left: 5px;
+}
+.Second-div {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    display: inline-block;
+    width: 380px;
+    vertical-align: top;
+    margin-left: 10px;
+    font-family: Arial;
+}
+.Title-text {
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.description {
+    margin-left: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    color: grey;
+}
+
