@@ -1,5 +1,5 @@
 const Article = 'there is a storm coming to the East of the Philippines'; //first Article
-const Article2 = 'no more rainy days here, sun is about to show up';      //second article
+const Article2 = 'no more rainy days here, sun is about to shoW up';      //second article
 
 //first article
 const filterUpperCase = Article.replace(/[^A-Z]/g, '').substring(0,1);                  // will get the upper-case letter which is E and P letters 
